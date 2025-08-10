@@ -22,8 +22,7 @@ class WhisperCastApp:
         buffer = b""
         buffer_duration = 0.0
         CHUNK_DURATION = 0.03
-        BUFFER_LIMIT = 10.0  # Adjustable for sentence length
-        
+        BUFFER_LIMIT = 10.0  # Adjustable for sentence length        
         while True:
             if not self.running:
                 if buffer:
@@ -36,20 +35,17 @@ class WhisperCastApp:
             if not pcm:
                 continue
             buffer += pcm
-            buffer_duration += CHUNK_DURATION
-            
+            buffer_duration += CHUNK_DURATION      
             if buffer_duration >= BUFFER_LIMIT:
                 self._process_buffer(buffer)
                 buffer = b""
                 buffer_duration = 0.0
-
     def _process_buffer(self, buffer):
         raw = self.stt.transcribe(buffer)
         if raw.strip():
             print("\nTranscribed:", raw)
         else:
             logger.info("Empty transcription skipped")
-
     def toggle_recording(self):
         if self.running:
             self.audio.stop()
@@ -61,6 +57,6 @@ class WhisperCastApp:
             self.running = True
             print("\n Recording started! Speak now...")
             logger.info("Recording started")
-
 if __name__ == "__main__":
     WhisperCastApp().run()
+
