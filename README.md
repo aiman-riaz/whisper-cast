@@ -1,6 +1,6 @@
 # WhisperCast
 
-**WhisperCast** is a student-friendly, real-time speech-to-text application built on the powerful Faster-Whisper engine. Designed for accessibility, simplicity, and speed, WhisperCast enables users to transcribe spoken language with optional GPU support, intuitive hotkeys, clean code structure, and easily configurable settings.[1]
+**WhisperCast** is a student-friendly, real-time speech-to-text application built on the powerful Faster-Whisper engine. Designed for accessibility, simplicity, and speed, WhisperCast enables users to transcribe spoken language with optional GPU support, intuitive hotkeys, clean code structure, and easily configurable settings.
 
 ***
 
