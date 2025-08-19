@@ -10,6 +10,7 @@
 - **Faster-Whisper Integration:** Utilizes the efficient Faster-Whisper backend for high-quality transcription.
 - **GPU Acceleration:** Optional GPU support for lightning-fast processing on compatible hardware.
 - **Hotkey Controls:** Easily start, stop, and manage transcriptions with customizable keyboard shortcuts.
+- **Silence Detection (Future/Optional):** Uncomment/add `silence_timeout` in config.toml.
 - **Clean Codebase:** Simple architecture facilitates quick understanding and easy contributions.
 - **Student-Friendly:** Optimized for use in classrooms, lectures, and personal study.
 
