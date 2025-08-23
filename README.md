@@ -16,6 +16,37 @@
 
 ***
 
+
+## 📁 Project Structure & Path
+
+WhisperCast/
+├── README.md                 # This file
+├── LICENSE                   # MIT license
+├── requirements.txt          # Python dependencies
+├── config.toml              # Configuration settings
+├── .gitignore               # Git ignore rules
+│
+├── whispercast/             # Main package directory
+│   ├── __init__.py          # Package initializer
+│   ├── main.py              # Application entry point
+│   ├── transcription.py     # Speech-to-text engine
+│   ├── audio_capture.py     # Microphone audio capture
+│   └── utils.py             # Configuration and logging utilities
+│
+└── .venv/                   # Virtual environment (created during setup)
+
+## Keep in mind the naming of all files and folders.
+
+Key Files:
+main.py: Application controller with hotkey handling and audio processing loop
+transcription.py: Whisper model interface with GPU auto-detection
+audio_capture.py: PyAudio wrapper for microphone input
+utils.py: Configuration loader and logging setup
+config.toml: User-editable settings file
+
+
+***
+
 ## Installation
 
 1. Clone the repository:
@@ -34,6 +65,13 @@
    
 4. Setup any additional configurations as described below.
 
+On first execution, WhisperCast will automatically download the specified Whisper model:
+tiny: ~39MB (fastest, basic accuracy)
+base: ~74MB (balanced speed/accuracy) - Default
+small: ~244MB (better accuracy)
+medium: ~769MB (high accuracy)
+large-v3: ~1550MB (best accuracy, slowest)
+
 ***
 
 ## Usage
@@ -45,6 +83,9 @@
 - Use the provided hotkeys to begin and end recording.
 - Configure preferences (model settings) in the configuration file or via command-line arguments.
 - Transcribed text will appear in real time; you can copy, export, or save it as needed.
+- "No module named 'whispercast'":
+    Ensure you're running from the project root directory (WhisperCast/)
+    Activate your virtual environment: .venv\Scripts\activate
 
 ***
 
