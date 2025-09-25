@@ -19,12 +19,12 @@
 
 ## 📁 Critical Project Structure & Path
 
-WhisperCast/
-    README.md
-    LICENSE
-    requirements.txt
-    config.toml
-    .gitignore
+    WhisperCast/
+        README.md
+        LICENSE
+        requirements.txt
+        config.toml
+        .gitignore
     
     whispercast/
         __init__.py
