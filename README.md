@@ -17,23 +17,25 @@
 ***
 
 
-## 📁 Project Structure & Path
+## 📁 Critical Project Structure & Path
 
 WhisperCast/
-├── README.md                 # This file
-├── LICENSE                   # MIT license
-├── requirements.txt          # Python dependencies
-├── config.toml              # Configuration settings
-├── .gitignore               # Git ignore rules
 │
-├── whispercast/             # Main package directory
-│   ├── __init__.py          # Package initializer
-│   ├── main.py              # Application entry point
-│   ├── transcription.py     # Speech-to-text engine
-│   ├── audio_capture.py     # Microphone audio capture
-│   └── utils.py             # Configuration and logging utilities
+├── README.md
+├── LICENSE
+├── requirements.txt
+├── config.toml
+├── .gitignore
 │
-└── .venv/                   # Virtual environment (created during setup)
+├── whispercast/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── transcription.py
+│   ├── audio_capture.py
+│   └── utils.py
+│
+└── .venv/
+    └── (virtual environment files)
 
 ## Keep in mind the naming of all files and folders.
 
@@ -85,7 +87,8 @@ large-v3: ~1550MB (best accuracy, slowest)
 - Transcribed text will appear in real time; you can copy, export, or save it as needed.
 - "No module named 'whispercast'":
     Ensure you're running from the project root directory (WhisperCast/)
-    Activate your virtual environment: .venv\Scripts\activate
+
+  Activate your virtual environment: .venv\Scripts\activate
 
 ***
 
@@ -99,6 +102,27 @@ Edit `config.toml` (or similar configuration file, see documentation) to customi
 - Whisper model selection (Options: tiny/base/small/medium/large-v3) (bigger = more accurate but slower)
 - GPU/CPU usage
 
+***
+
+## Common Issues and Fixes
+
+1."No module named whispercast":
+
+-Navigate to WhisperCast/ root directory
+-Ensure whispercast/ folder exists with all Python files
+-Create empty __init__.py in whispercast/ folder
+-Activate virtual environment
+
+2."Config file not found":
+
+-Ensure config.toml is in project root (same level as README.md)
+-Not inside whispercast/ subfolder
+
+3.GPU not detected:
+
+-Install PyTorch: pip install torch --index-url https://download.pytorch.org/whl/cu121
+-Check drivers: nvidia-smi
+-App automatically falls back to CPU
 
 ***
 
@@ -122,5 +146,3 @@ This project is licensed under the MIT License.
 ***
 
 *For more information and support, please refer to the project's documentation or open an issue on the GitHub repo.*
-
-[1] https://github.com/aiman-riaz/whisper-cast
