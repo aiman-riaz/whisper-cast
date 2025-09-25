@@ -26,15 +26,14 @@
         config.toml
         .gitignore
     
-    whispercast/
-        __init__.py
-        main.py
-        transcription.py
-        audio_capture.py
-        utils.py
+        whispercast/
+            __init__.py
+            main.py
+            transcription.py
+            audio_capture.py
+            utils.py
     
-    .venv/
-        (virtual environment files)
+        .venv/(virtual environment files)
 
 
 ## Keep in mind the naming of all files and folders.
